@@ -1,9 +1,14 @@
 <header>
   <nav
-    class="card h-20 px-[5rem] w-screen flex justify-between items-center rounded-none"
+    class="card dark:bg-[#2b3945] h-20 px-4 md:px-[5rem] w-screen flex justify-between items-center rounded-none"
   >
-    <a href="/" class="text-2xl font-extrabold">Where in the world?</a>
-    <p><i class="bi bi-moon mr-3"></i>Dark Mode</p>
+    <a href="/" class="text-xl md:text-2xl font-extrabold"
+      >Where in the world?</a
+    >
+    <p (click)="onChange()" class="cursor-pointer">
+      <i [class]="(isDarkMode ? 'bi-moon-fill' : 'bi-moon') + ' bi mr-3'"></i
+      >Dark Mode
+    </p>
   </nav>
 </header>
 <router-outlet></router-outlet>

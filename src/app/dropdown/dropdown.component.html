@@ -1,5 +1,5 @@
 <div
-  class="card py-4 w-[200px] flex relative justify-between items-center px-6"
+  class="card mt-8 md:mt-0 py-4 dark:bg-[#2b3945] w-[200px] flex relative justify-between items-center px-6"
   (click)="show = !show; $event.stopPropagation()"
   id="dropDown"
 >
@@ -7,7 +7,7 @@
   <i class="bi bi-chevron-down text-xs"></i>
   <div
     *ngIf="show === true"
-    class="card absolute overflow-hidden top-[60px] h-max-[150px] h-min-[2000px] w-[200px] left-0"
+    class="card dark:bg-[#2b3945] absolute overflow-hidden top-[60px] h-max-[150px] h-min-[2000px] w-[200px] left-0"
   >
     <ul class="text-sm">
       <li
