@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 @layer components {
   .card {

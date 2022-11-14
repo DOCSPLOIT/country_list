@@ -1,1 +1,57 @@
-<p>country works!</p>
+<main class="mt-16 px-[5rem]">
+  <button [routerLink]="'/'" class="card w-[138px] mt-4 space-x-3 h-[40px]">
+    <i class="bi bi-arrow-left text-xl font-semibold align-middle"></i>
+    Back
+  </button>
+  <div class="mt-16 flex space-x-28">
+    <img
+      [src]="country?.flags?.svg"
+      alt="flag"
+      class="w-[35em] h-[25em] mt-4"
+    />
+    <div class="pl-2 grow">
+      <p class="text-[2rem] leading-tight mt-14">
+        <b>{{ country?.name?.common }}</b>
+      </p>
+      <div class="flex mt-8 space-x-36">
+        <div class="flex flex-col space-y-2">
+          <p>
+            <b class="font-semibold">Native Name:&nbsp;</b>{{ nativeName() }}
+          </p>
+          <p>
+            <b class="font-semibold">Population:&nbsp;</b
+            >{{ country?.population }}
+          </p>
+          <p><b class="font-semibold">Region:&nbsp;</b>{{ country?.region }}</p>
+          <p>
+            <b class="font-semibold">Sub Region:&nbsp;</b
+            >{{ country?.subregion }}
+          </p>
+          <p>
+            <b class="font-semibold">Capital:&nbsp;</b>{{ country?.capital }}
+          </p>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <p>
+            <b class="font-semibold">Top Level Domain:&nbsp;</b
+            >{{ country?.tld }}
+          </p>
+          <p>
+            <b class="font-semibold">Currencies:&nbsp;</b>{{ currencies() }}
+          </p>
+          <p><b class="font-semibold">Languages:&nbsp;</b>{{ languages() }}</p>
+        </div>
+      </div>
+      <div>
+        <div class="mt-[4.5rem] flex space-x-2">
+          <b class="font-semibold">Border Countries:&nbsp;</b>
+          <div class="flex space-x-1">
+            <p class="card px-10 py-1" *ngFor="let q of country?.borders">
+              {{ q }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
