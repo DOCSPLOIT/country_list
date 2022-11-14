@@ -17,7 +17,7 @@ export class DropdownComponent implements OnInit {
   @HostListener('document:click', ['$event']) onDocumentClick(event: MouseEvent) {
     this.show = false;
   }
-
+  selected?: string;
   onSelect(item: string,) {
     this.onChange.emit(item);
   }

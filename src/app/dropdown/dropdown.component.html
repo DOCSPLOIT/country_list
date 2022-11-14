@@ -3,7 +3,7 @@
   (click)="show = !show; $event.stopPropagation()"
   id="dropDown"
 >
-  <label class="text-sm">Filter by region</label>
+  <label class="text-sm">{{ selected ?? "Filter by region" }}</label>
   <i class="bi bi-chevron-down text-xs"></i>
   <div
     *ngIf="show === true"
@@ -13,7 +13,7 @@
       <li
         *ngFor="let i of items"
         id="dropDownItem"
-        (click)="onSelect(i)"
+        (click)="onSelect(i); selected = i"
         class="py-2.5 hover:bg-blue-400 hover:text-white px-6"
       >
         {{ i }}
